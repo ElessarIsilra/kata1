@@ -4,7 +4,8 @@
  */
 package proyecto1;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -22,13 +23,12 @@ public class Proyecto1 {
 
 
         Person p1;
-        Date f;
-        f = new Date(91, 9, 10);
-
-
+        Calendar f;
+        f = GregorianCalendar.getInstance();
+        f.set(1964, 7, 3);
         p1 = new Person("Enrique", "Ramon", f);
         System.out.println(p1.getFullName());
-        System.out.println(p1.getBirthday());
+        System.out.println(p1.getBirthday().getTime());
         System.out.println(p1.getAge());
         System.out.println("Fin");
     }
